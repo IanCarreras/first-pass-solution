@@ -9,6 +9,8 @@ def single_number(arr):
     # because the array is sorted all duplicate values will be adjacent
     # if the middle element doesn't equal the element to either side
     # it is the single number
+    # if at the last iteration single is still equal to None
+    # the last element is the single number
     arr.sort()
     print(arr)
     single = None
