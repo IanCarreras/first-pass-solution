@@ -3,9 +3,19 @@ Input: a List of integers as well as an integer `k` representing the size of the
 Returns: a List of integers
 '''
 def sliding_window_max(nums, k):
-    # Your code here
+    # iterate through list and work with a chunk of k elements at each iteration
+    # for each iteration sort the splice and append largest number to new array
+    start = 0
+    window = k
+    array = []
+    while window <= len(nums):
+        chunk = nums[start:window]
+        chunk.sort(reverse=True)
+        array.append(chunk[0])
+        window +=1
+        start +=1
+    return array
 
-    pass
 
 
 if __name__ == '__main__':
