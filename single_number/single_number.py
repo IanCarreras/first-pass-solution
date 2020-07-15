@@ -4,20 +4,18 @@ Returns: an integer
 '''
 def single_number(arr):
     # sort array 
-    # the loop will start at the third position
-    # and track the previous two elements in the array
     # because the array is sorted all duplicate values will be adjacent
+    # loop through the array starting at the third position
+    # compare 3 adjacent elements starting with the first 3
+    # increment all positions by 1 until all elements have been accounted for
     # if the middle element doesn't equal the element to either side
     # it is the single number
     # if at the last iteration single is still equal to None
     # the last element is the single number
     arr.sort()
-    print(arr)
     single = None
-    first = arr[0]
     i = 2
     while i < len(arr):
-        print(f'{arr[i-2]} {arr[i-1]} {arr[i]}')
         if arr[i-1] != arr[i-2]  and arr[i-1] != arr[i]:
             single = arr[i-1]
             return single
